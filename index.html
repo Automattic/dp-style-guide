@@ -1,1 +1,221 @@
-Hello World
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Daily Post Style Guide</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link href="genericons/genericons.css" rel="stylesheet">
+
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.avgrund.min.js"></script>
+		<script type="text/javascript" src="js/rainbow.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+	</head>
+	<body class="group">
+
+		<header class="library-header">
+			<h1>Daily Post Style Guide</h1>
+			<p>This guide is aimed at Editors and Authors on the Daily Post. This guide will give you an understanding of how the site works, as well as show you how to create compelling and beautiful layouts in your posts using some simple copy-and-paste-able&nbsp;HTML.</p>
+		</header>
+
+		<section class="library-contents" id="library-contents">
+			<h3>Table of Contents</h3>
+			<ol>
+				<li><a href="#post-layout">Post Layout</a></li>
+				<li><a href="#adding-to-the-gutter">Adding to the Gutter</a></li>
+				<li><a href="#notes-and-quotes">Notes, and Pull Quotes, and Blockquotes, Oh My!</a></li>
+				<li><a href="#full-bleed">Full Bleed, Ouch!</a></li>
+				<li><a href="#featured-images">Featured Images</a></li>
+				<li><a href="#comment-styles">Author and Editor Comments</a></li>
+				<li><a href="#featured-content">Homepage Feature Blocks</a></li>
+			</ol>
+		</section>
+
+		<section class="pattern-group">
+			<header class="pattern-header">
+				<h2>The Homepage</h2>
+				<p><strong>This is a stub and needs to be fleshed out.</strong></p>
+				<ul>
+					<li>The top of the homepage features today's daily prompt.</li>
+					<li>The Blogging U. section lists all <em>In-Progress</em> courses.</li>
+					<li>The latest Photo and Writing challenges are shown. All Photo challenges should have a featured image. Writing challeneges don't always need one, but its often nice to have.</li>
+					<li>Quick Notes are great for daily updates and tweet-like announcements.</li>
+					<li>The Featured Categories block is controlled via our Feature Content widgets. The section should adapt as needed for 2 - 6 widgets comfortably.</li>
+					<li>Popular Posts are selected using the <strong>popular</strong> tag. Just add the tag to any post to show it.</li>
+					<li>The footer consists of three seperate widget areas. Go to town.</li>
+				</ul>
+			</header>
+		</section>
+
+		<section class="pattern-group">
+			<header class="pattern-header">
+				<h2 id="post-gutter">The Post Gutter</h2>
+				<p>The gutter area is shown to the left of the content when reading the post. You can use this space for notes, quotes, asides, images, and more. You can also tell an image to go "full bleed" and stretch out of the content into the gutter &mdash; which really let's Cheri's amazing photographs shine.</p>
+
+				<div class="image">
+					<img src="img/post-columns.png">
+				</div>
+			</header>
+
+			<article class="pattern">
+				<div class="image alignright">
+					<img src="img/alignleft-example.png">
+					<p class="caption">An example of an image with the <code>alignleft</code> class applied to the blockquote.</p>
+				</div>
+
+				<h3 id="adding-to-the-gutter">Adding to the Gutter</h3>
+				<p>You can add things to the gutter by adding the <code>alignleft</code> class to your element. There are aliases setup for <code>align-left</code>, <code>leftalign</code>, and <code>left-align</code> &mdash; they all do the same thing, but having multiple class names makes it easier to remember when editing.</p>
+				<p>For example, you can add the <code>alignleft</code> class to any image:</p>
+
+				<pre>
+					<code data-language="html"><img class="alignleft" src="image.jpg"></code>
+				</pre>
+
+				<p>This will push the image into the gutter. The top of the image will align with the top of the next paragraph in your post. The width of the image will automatically adjust to fit the width of the gutter. The gutter is perfect for portrait and square images; Landscape images tend to feel too small.</p>
+			</article>
+
+			<article class="pattern">
+				<div class="image alignright">
+					<img src="img/post-note.png">
+					<p class="caption">An example of a <strong>Post Note</strong> with the <code>alignleft</code> and <code>post-note</code> classes applied.</p>
+				</div>
+
+				<h3 id="post-notes">Post Notes</h3>
+				<p>Post notes are really useful for references and asides. <strong>Post notes will only be styled inside the gutter.</strong></p>
+
+				<pre>
+					<code data-language="html"><blockquote class="post-note alignleft"><strong>Note:</strong> This is my note.</blockquote></code>
+				</pre>
+			</article>
+
+			<article class="pattern">
+				<div class="image alignright">
+					<img src="img/pull-quote-gutter.png">
+					<p class="caption">An example of a blockquote with the <code>alignleft</code> and <code>pullquote</code> classes applied.</p>
+				</div>
+
+				<h3 id="gutter-pull-quotes">Pull Quotes</h3>
+				<p>You can put a pull qoute into the gutter. Just use the <a href="#pull-quotes">pull quotes pattern</a> and add the <code>alignleft</code> class to the containing element.</p>
+
+				<pre>
+					<code data-language="html"><blockquote class="alignleft pullquote"><p>I felt a surge of power...</p></blockquote></code>
+				</pre>
+			</article>
+
+			<article class="pattern">
+				<div class="image alignright">
+					<img src="img/fullbleed-example.png">
+					<p class="caption">An example of an image wrapped in a <code>&lt;div class=&quot;fullbleed&quot;&gt;</code> element.</p>
+				</div>
+
+				<h3 id="gutter-full-bleed">Full Bleed Images</h3>
+				<p>You can create "full bleed" images, that is, images which stretch across both the Content Area and the Gutter. To let your image bleed across both columns, you can add the <code>fullbleed</code> or <code>full-bleed</code> class to a container element. If you're looking to bleed an image, you'll likely need to add a <code>&lt;div&gt;</code> wrapper around the image:</p>
+
+				<pre>
+					<code data-language="html"><div class="fullbleed"><img src="image.jpg"></div></code>
+				</pre>
+			</article>
+		</section>
+
+		<section class="pattern-group">
+			<header class="pattern-header">
+				<h2>Quotes and Notes</h2>
+				<p>The Daily Post supports styling for a variety of blockquotes and notes.</p>
+			</header>
+
+			<article class="pattern">
+				<div class="image alignright">
+					<img src="img/blockquote.png">
+					<p class="caption">An example of a plain blockquote.</p>
+				</div>
+
+				<h3 id="blockquote">Blockquote</h3>
+				<p>Blockquotes, by default, are seperated from normal post content by an extra margin and a light background color.</p>
+
+				<pre>
+					<code data-language="html"><blockquote><p>This is my blockquote.</p></blockquote></code>
+				</pre>
+			</article>
+
+			<article class="pattern">
+				<div class="image alignright">
+					<img src="img/pull-quote.png">
+					<p class="caption">An example of a blockquote with the <code>pullquote</code> class applied.</p>
+				</div>
+
+				<h3 id="pullquote">Pullquotes</h3>
+				<p>Pullquotes are a great way to show an excerpt from another post, a quote from an interview, or even as a way to highlight something from your post. Pullquotes will display their contents in a large, serif type and use a visual element to signify that they are quotations.</p>
+
+				<pre>
+					<code data-language="html"><blockquote class="pullquote"><p>Four score and seven years ago...</p></blockquote></code>
+				</pre>
+			</article>
+
+			<article class="pattern">
+				<div class="image alignright">
+					<img src="img/editors-note.png">
+					<p class="caption">Notice how the first paragraph (which uses the <code>editorial-note</code> class) is larger than the others.</p>
+				</div>
+
+				<h3 id="editorial-note">Editorial Note</h3>
+				<p>Useful when you (the Editor) is introducing a post written by someone else. Its also a great way to differentiate any text from the normal post content. Editorial Notes display text larger than normal paragraphs and in a darker color.</p>
+
+				<pre>
+					<code data-language="html"><p class="editorial-note">Today's post comes to us from Krista...</p></code>
+				</pre>
+			</article>
+		</section>
+
+
+		<section class="pattern-group">
+			<header class="pattern-header">
+				<h2 id="featured-images">Featured Images</h2>
+				<p><strong>This is a stub and needs to be fleshed out.</strong></p>
+				<ul>
+					<li>Featured images are displayed in the header of individual post pages.</li>
+					<li>If the current day's prompt has a featured image, it will be displayed prominently on the homepage.</li>
+					<li>The Daily Prompt will adjust itself to try and match the featured image's color. The menu bar, logo, footer, and link colors will try their best to adapt to fit the color's found in the featured image. This is especially noticable on the homepage when a prompt has a featured image.</li>
+				</ul>
+			</header>
+		</section>
+
+		<section class="pattern-group">
+			<header class="pattern-header">
+				<h2 id="comments">Comments</h2>
+				<p><strong>This is a stub and needs to be fleshed out.</strong></p>
+			</header>
+
+			<article class="pattern">
+				<h3 id="author-comments">Author and Editor Comments</h3>
+				<p>Post authors (including guest authors) and editors get special treatment.</p>
+			</article>
+		</section>
+
+<!-- Blank Structures
+<section class="pattern-group">
+	<header class="pattern-header">
+		<h2></h2>
+		<p></p>
+	</header>
+</section>
+
+<article class="pattern">
+	<div class="image alignright">
+		<img src="img/editors-note.png">
+		<p class="caption"></p>
+	</div>
+
+	<h3 id="#"></h3>
+	<p></p>
+
+	<pre>
+		<code data-language="html"></code>
+	</pre>
+</article>
+-->
+	</body>
+</html>

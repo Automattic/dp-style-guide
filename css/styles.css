@@ -1,0 +1,263 @@
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 62.5%;
+	background: #333;
+}
+
+body {
+	font-size: 1.5rem;
+	margin: 40px auto;
+	padding: 0;
+	max-width: 1200px;
+	background: #fff;
+	box-sizing: border-box;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+	color: #555;
+	line-height: 1.7;
+}
+
+@media only screen and (max-width: 1200px) {
+	body {
+		margin: auto;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Merriweather', serif;
+	color: #222;
+	margin: 0 0 10px 0;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+hr {
+	margin: 0 0 35px 0;
+	padding: 20px 0 0 0;
+	border: none;
+	border-bottom: 1px dotted #ccc;
+	clear: both;
+}
+
+p {
+	margin: 0 0 20px 0;
+}
+
+p.caption {
+	font-size: 1.3rem;
+	line-height: 1.4;
+	color: rgba(0,0,0,0.4);
+	margin: 0;
+	padding: 15px 20px;
+}
+
+p.caption code {
+	margin: 0;
+	background: transparent;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	display: block;
+}
+
+.image {
+	margin: 0;
+}
+
+.image img {
+	border: 1px solid rgba(0,0,0,0.07);
+	box-shadow: 0 2px 12px 2px rgba(0,0,0,0.04);
+}
+
+.alignleft {
+	float: left;
+	margin: 0 60px 30px 0;
+	max-width: 50%;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 30px 60px;
+	max-width: 30%;
+}
+
+.pattern-group:after,
+.pattern:after,
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Library Header */
+.library-header {
+	background: #d54e21;
+	color: #fff;
+	padding: 40px 50px;
+	font-size: 1em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.library-header h1 {
+	color: #fff;
+	font-size: 4em;
+}
+.library-header p {
+	font-size: 1em;
+	max-width: 900px;
+	margin-bottom: 0;
+	line-height: 1.5;
+}
+
+
+/* Library Table of Contents */
+.library-contents {
+	display: none;
+	background: rgba(0,0,0,0.06);
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 30px 50px;
+}
+
+.library-contents ol {
+	font-size: 1.5rem;
+	margin: 0 -25px;
+	padding: 0;
+	list-style: decimal;
+	-moz-column-count: 2;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 20px;
+	column-count: 2;
+	column-gap: 20px;
+}
+
+.library-contents li {}
+
+.library-contents li a {
+	display: block;
+	padding: 10px 25px;
+}
+
+.library-contents li a:hover {
+	background: rgba(255,255,255,0.8);
+}
+
+
+/* Patterns */
+.pattern-group {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 50px;
+}
+
+.pattern-group h2 {
+	font-weight: 400;
+	font-size: 3.6rem;
+	color: #d54e21;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.pattern-header {
+	margin-bottom: 15px;
+}
+
+.pattern {
+	padding: 15px 0 25px 0;
+	border-bottom: 1px dotted rgba(0,0,0,0.05);
+	margin-bottom: 35px;
+}
+
+.pattern:last-child {
+	border: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+
+
+/* Syntax Highlighter (rainbow.js) Styles */
+/* Modified version of the "GitHub theme," by Craig Campbell (v1.0.4) */
+pre {
+border: 1px solid #ccc;
+word-wrap: break-word;
+padding: 16px 20px;
+line-height: 19px;
+margin-bottom: 20px;
+}
+
+code {
+border: 1px solid #eaeaea;
+margin: 0px 2px;
+padding: 0px 5px;
+font-size: 13px;
+}
+
+pre code {
+border: 0px;
+padding: 0px;
+margin: 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+border-radius: 0px;
+}
+
+pre, code {
+font-family: Consolas, 'Liberation Mono', Courier, monospace;
+color: #333;
+background: #f8f8f8;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+}
+
+pre, pre code {
+font-size: 14px;
+}
+
+pre .comment {
+color: #998;
+}
+
+pre .support {
+color: #0086B3;
+}
+
+pre .tag, pre .tag-name {
+color: navy;
+}
+
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+font-weight: bold;
+}
+
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+color: #333;
+}
+
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+font-weight: normal;
+color: #099;
+}
+
+pre .entity.class {
+color: #458;
+}
+
+pre .entity.id, pre .entity.function {
+color: #900;
+}
+
+pre .attribute, pre .variable {
+color: teal;
+}
+
+pre .string, pre .support.value  {
+font-weight: normal;
+color: #d14;
+}
+
+pre .regexp {
+color: #009926;
+}
